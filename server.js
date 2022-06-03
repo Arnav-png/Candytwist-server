@@ -12,6 +12,10 @@ mongoose.connect("mongodb+srv://candytwist:candytwist@candytwist.1qjyw.mongodb.n
     useNewUrlParser:true
 })
 
+app.get("/",(req,res)=>{
+    res.send("Welcome to candy twist app")
+})
+
 app.get("/scoreBoard",async(req,res)=>{
     
     ScoreSchema.find({},(err,result)=>{
