@@ -4,6 +4,7 @@ const cors = require('cors')
 const mongoose = require('mongoose')
 
 const ScoreSchema = require("./Model/model")
+const port = process.env.PORT || 3000
 
 app.use(cors())
 app.use(express.json())
@@ -44,7 +45,7 @@ app.post("/score",async(req,res)=>{
     }
 })
 
-app.listen(3001,()=>{
-    console.log("app listening on port 3001")
+app.listen(port,()=>{
+    console.log(`app listening on port ${port}`)
 })
 
